@@ -35,3 +35,8 @@ cb.say("В§6РџСЂРёРІРµС‚ dispeloff!")
 os.sleep(0.3)
 
 MainLoop()
+
+
+
+
+--test
