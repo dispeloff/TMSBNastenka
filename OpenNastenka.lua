@@ -19,7 +19,7 @@ end
 function ReadChat()
   local _, _, Nickname, Message = event.pull(1, "chat_message", nil, "dispeloff") -- msg РїСЂРёРЅРёРјР°РµС‚СЃСЏ С‚РѕР»СЊРєРѕ РѕС‚ РјРµРЅСЏ
   if Message == nil then
-  return
+  return Message
 
   elseif Message == "@shop" then
     cb.say("В§6Р—Р°РїСѓСЃРє СѓРјРЅРѕРіРѕ РІР°СЂРїР°...")
