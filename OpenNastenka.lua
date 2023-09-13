@@ -12,7 +12,9 @@ function Global_Shop()
   print("pizdec")
   while true do
     local _, _, Nickname, Message = event.pull(1, "chat_message", nil, "dispeloff") -- msg РїСЂРёРЅРёРјР°РµС‚СЃСЏ С‚РѕР»СЊРєРѕ РѕС‚ РјРµРЅСЏ
-      
+    if Message == nil then
+      return Message
+    end
     os.sleep(10)
   end
 end
