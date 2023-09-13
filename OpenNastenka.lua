@@ -10,6 +10,9 @@ local cb = com.chat_box
 
 function Global_Shop()
   print("pizdec")
+  while true do
+    os.sleep(10)
+  end
 end
 
 -- event "chat_message"
