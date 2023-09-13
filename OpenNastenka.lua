@@ -8,6 +8,10 @@ local io = require("io")
 local gpu = com.gpu
 local cb = com.chat_box
 
+function Global_Shop()
+  print("pizdec")
+end
+
 -- event "chat_message"
 function ReadChat()
   local _, _, Nickname, Message = event.pull(1, "chat_message", nil, "dispeloff") -- msg РїСЂРёРЅРёРјР°РµС‚СЃСЏ С‚РѕР»СЊРєРѕ РѕС‚ РјРµРЅСЏ
@@ -16,6 +20,8 @@ function ReadChat()
 
   elseif Message == "@shop" then
     cb.say("В§6Р—Р°РїСѓСЃРє СѓРјРЅРѕРіРѕ РІР°СЂРїР°...")
+    Global_Shop()
+  return
 
   elseif Message == "@help" then
     cb.say("В§bРЎРїРёСЃРѕРє РґРѕСЃС‚СѓРїРЅС‹С… РєРѕРјР°РЅРґ: \n   В§c1.В§a help В§6 - РЎРїРёСЃРѕРє РґРѕСЃС‚СѓРїРЅС‹С… РєРѕРјР°РЅРґ \n   В§c1.В§a stop В§6 - РћСЃС‚Р°РЅРѕРІРєР° Р±РѕС‚Р°\n")
