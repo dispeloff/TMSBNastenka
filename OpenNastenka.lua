@@ -14,6 +14,9 @@ function ReadChat()
   if Message == nil then
   return
 
+  elseif Message == "@shop" then
+    cb.say("")
+
   elseif Message == "@help" then
     cb.say("В§bРЎРїРёСЃРѕРє РґРѕСЃС‚СѓРїРЅС‹С… РєРѕРјР°РЅРґ: \n   В§c1.В§a help В§6 - РЎРїРёСЃРѕРє РґРѕСЃС‚СѓРїРЅС‹С… РєРѕРјР°РЅРґ \n   В§c1.В§a stop В§6 - РћСЃС‚Р°РЅРѕРІРєР° Р±РѕС‚Р°\n")
   return
