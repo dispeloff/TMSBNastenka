@@ -11,6 +11,7 @@ local cb = com.chat_box
 function Global_Shop()
   print("pizdec")
   while true do
+    local _, _, Nickname, Message = event.pull(1, "chat_message", nil, "dispeloff") -- msg РїСЂРёРЅРёРјР°РµС‚СЃСЏ С‚РѕР»СЊРєРѕ РѕС‚ РјРµРЅСЏ
     os.sleep(10)
   end
 end
