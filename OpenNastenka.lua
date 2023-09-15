@@ -10,14 +10,28 @@ local cb = com.chat_box
 
 function Global_Shop()
   print("pizdec")
+  cb.say("Р”РѕР±СЂРѕ РїРѕР¶Р°Р»РѕРІР°С‚СЊ РЅР° /warp inf - dispeloff! \n ")
+  cb.say("В§6РЎРїРёСЃРѕРє РґРѕСЃС‚СѓРїРЅС‹С… СЂР°Р·РґРµР»РѕРІ: \n		В§c1.В§b Industrial Craft 2 \n		В§c2.В§d Thermal Expansion \n		В§c3.В§b EnderIO ")
   while true do
-    local _, _, Nickname, Message = event.pull(1, "chat_message", nil, "dispeloff") -- msg РїСЂРёРЅРёРјР°РµС‚СЃСЏ С‚РѕР»СЊРєРѕ РѕС‚ РјРµРЅСЏ
-    if Message == nil then
+    function ReadChat1()
+      local _, _, Nickname, Message = event.pull(1, "chat_message", nil, "dispeloff") -- msg РїСЂРёРЅРёРјР°РµС‚СЃСЏ С‚РѕР»СЊРєРѕ РѕС‚ РјРµРЅСЏ
+      if Message == nil then
       return Message
-    elseif Message == "@help" then
-      cb.say("В§bРЎРїРёСЃРѕРє РґРѕСЃС‚СѓРїРЅС‹С… РєРѕРјР°РЅРґ: \n   В§c1.В§a help В§6 - РЎРїРёСЃРѕРє РґРѕСЃС‚СѓРїРЅС‹С… РєРѕРјР°РЅРґ \n   В§c1.В§a stop В§6 - РћСЃС‚Р°РЅРѕРІРєР° Р±РѕС‚Р°\n")
-    return
 
+      elseif Message == "@shop" then
+        cb.say("В§6Р—Р°РїСѓСЃРє СѓРјРЅРѕРіРѕ РІР°СЂРїР°...")
+        Global_Shop()
+      return
+
+      elseif Message == "@help" then
+        cb.say("В§bРЎРїРёСЃРѕРє РґРѕСЃС‚СѓРїРЅС‹С… РєРѕРјР°РЅРґ: \n   В§c1.В§a help В§6 - РЎРїРёСЃРѕРє РґРѕСЃС‚СѓРїРЅС‹С… РєРѕРјР°РЅРґ \n   В§c1.В§a stop В§6 - РћСЃС‚Р°РЅРѕРІРєР° Р±РѕС‚Р°\n")
+      return
+
+      elseif Message == "@stop" then
+        cb.say("В§cРњРѕСЏ РћСЃС‚Р°РЅРѕРІРѕС‡РєР°")
+        os.exit()
+      end
+    end
     os.sleep(10)
   end
 end
