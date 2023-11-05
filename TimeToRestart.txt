@@ -1,1 +1,1 @@
-({hours}ч. {minutes}м.
+{hours}ч. {minutes}м.
